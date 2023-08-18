@@ -97,8 +97,11 @@ fig_product_sales.update_layout(
 #define plotly sales by date
 fig_sales_date = px.histogram(
     sales_by_date,
-    x='Total',
-    y=sales_by_date.index,
+    # x='Total',
+    # y=sales_by_date.index,
+    y='Total',
+    x=sales_by_date.index,
+
     # orientation='h',
     title = '<b>Sales by Date</b>',
     color_discrete_sequence=['#008388'] * len(sales_by_date),
