@@ -46,7 +46,7 @@ df_selection = df.query(
 
 
 ##mainpage
-st.title("Sales Dashboard")
+st.title("Redframe Sales Dashboard")
 st.markdown('---')
 
 #top kpi
