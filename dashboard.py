@@ -107,6 +107,7 @@ fig_sales_date = px.hist(
 fig_sales_date.update_layout(
     # plot_bgcolor='rgba(0.3,0.3,0.3,0.3)',
     xaxis=(dict(showgrid=True))
+)
 
 #create sales by hour graph
 sales_by_hour = df_selection.groupby(by=['hour'])[['Total']].sum()
