@@ -43,11 +43,11 @@ df_selection = df.query(
     'City == @city & Customer_type == @customer_type & Gender == @gender'
 )
 
-
+<center>
 ##mainpage
 st.title("Redframe Sales Dashboard")
 st.markdown('---')
-
+</center>
 
 
 #top kpi
