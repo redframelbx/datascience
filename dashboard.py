@@ -89,10 +89,28 @@ fig_product_sales.update_layout(
     xaxis=(dict(showgrid=True))
 )
 
-#preprocess time column and 
+#create sales by hour graph
+sales_by_hour = df_selection.groupby(by=['hour']).sum()[['Total']]
+fig_hourly_sales = px.bar(
+    sales_by_hour,
+    x = sales_by_hour.index,
+    y='Total',
+    title = '<b> Sales by Hour</b>',
+    color_discrete_sequence = ['#008388']* len(sales_by_hour),
+    template = 'plotly_white',
+)
+fig_hourly_sales.update_layout(
+    xaxis=dict(tickmode='linear'),
+    yaxis=(dict(showgrid=True)),
+)
 
+#st.plotly_chart(fig_product_sales)
 
-st.plotly_chart(fig_product_sales)
+#set the graph to appear next to each other
+left_column, right_column = st.columns(2)
+left_column.plotly_chart(fig_hourly_sales, use_container_width=True)
+right_column.plotly_chart(fig_product_sales, use_container_width=True)
+
 
 st.dataframe(df_selection)
 
