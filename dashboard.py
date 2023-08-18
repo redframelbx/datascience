@@ -95,7 +95,7 @@ fig_product_sales.update_layout(
     xaxis=(dict(showgrid=True))
 )
 #define plotly sales by date
-fig_sales_date = px.hist(
+fig_sales_date = px.histogram(
     sales_by_date,
     x='Total',
     y=sales_by_date.index,
