@@ -94,7 +94,8 @@ fig_product_sales = px.bar(
 )
 fig_product_sales.update_layout(
     # plot_bgcolor='rgba(0.3,0.3,0.3,0.3)',
-    xaxis=(dict(showgrid=True))
+    xaxis=(dict(showgrid=True)),
+    plot_bgcolor='white'
 )
 #define plotly sales by date
 fig_sales_date = px.line(
@@ -111,6 +112,7 @@ fig_sales_date = px.line(
 fig_sales_date.update_layout(
     # plot_bgcolor='rgba(0.3,0.3,0.3,0.3)',
     xaxis=(dict(showgrid=True)),
+    plot_bgcolor='white'
 )
 
 #create sales by hour graph
@@ -126,6 +128,7 @@ fig_hourly_sales = px.bar(
 fig_hourly_sales.update_layout(
     xaxis=dict(tickmode='linear'),
     yaxis=(dict(showgrid=True)),
+    plot_bgcolor='white'
 )
 
 
