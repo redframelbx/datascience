@@ -112,7 +112,7 @@ fig_sales_date.update_layout(
 
 #create sales by hour graph
 sales_by_hour = df_selection.groupby(by=['hour'])[['Total']].sum()
-fig_hourly_sales = px.bar(
+fig_hourly_sales = px.histogram(
     sales_by_hour,
     x = sales_by_hour.index,
     y='Total',
