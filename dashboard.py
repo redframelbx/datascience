@@ -99,7 +99,7 @@ fig_sales_date = px.histogram(
     # x='Total',
     # y=sales_by_date.index,
     y='Total',
-    x=sales_by_date,
+    x=sales_by_date.index,
     # orientation='h',
     title = '<b>Sales by Date</b>',
     #color_discrete_sequence=['#008388'] * len(sales_by_date),
@@ -107,6 +107,7 @@ fig_sales_date = px.histogram(
 )
 fig_sales_date.update_layout(
     # plot_bgcolor='rgba(0.3,0.3,0.3,0.3)',
+    xaxis=dict(tickmode='linear'),
     xaxis=(dict(showgrid=True))
 )
 
