@@ -94,12 +94,12 @@ fig_product_sales.update_layout(
     # plot_bgcolor='rgba(0.3,0.3,0.3,0.3)',
     xaxis=(dict(showgrid=True))
 )
-#define plotly sales by hour
-fig_sales_date = px.bar(
+#define plotly sales by date
+fig_sales_date = px.hist(
     sales_by_date,
     x='Total',
     y=sales_by_date.index,
-    orientation='h',
+    # orientation='h',
     title = '<b>Sales by Date</b>',
     color_discrete_sequence=['#008388'] * len(sales_by_date),
     template='plotly_white',
@@ -109,7 +109,7 @@ fig_sales_date.update_layout(
     xaxis=(dict(showgrid=True))
 
 #create sales by hour graph
-sales_by_hour = df_selection.groupby(by=['hour'])[['Total']].sum()
+sales_by_hour = df_selection.groupby(by=['hour']).sum()[['Total']]
 fig_hourly_sales = px.bar(
     sales_by_hour,
     x = sales_by_hour.index,
