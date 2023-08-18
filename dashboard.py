@@ -3,7 +3,7 @@ import plotly.express as px
 import streamlit as st
 
 #must be called as the first Streamlit command in your script.
-st.set_page_config(page_title='Supermarkt Dashboard',
+st.set_page_config(page_title='redframe Supermarket Dashboard',
                    page_icon='🛒',
                    layout='wide')
 
