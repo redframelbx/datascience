@@ -77,7 +77,6 @@ sales_by_product_line = (
 
 #define sales by date
 sales_by_date = df_selection.groupby(by=['Date'])[['Total']].sum()
-sales_by_date
 
 #create bar chart using plotly
 #define plotly sales by product
@@ -100,11 +99,10 @@ fig_sales_date = px.histogram(
     # x='Total',
     # y=sales_by_date.index,
     y='Total',
-    x=sales_by_date.index,
-
+    x=sales_by_date,
     # orientation='h',
     title = '<b>Sales by Date</b>',
-    color_discrete_sequence=['#008388'] * len(sales_by_date),
+    #color_discrete_sequence=['#008388'] * len(sales_by_date),
     template='plotly_white',
 )
 fig_sales_date.update_layout(
