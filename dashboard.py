@@ -107,8 +107,7 @@ fig_sales_date = px.histogram(
 )
 fig_sales_date.update_layout(
     # plot_bgcolor='rgba(0.3,0.3,0.3,0.3)',
-    xaxis=dict(tickmode='linear'),
-    xaxis=(dict(showgrid=True))
+    xaxis=(dict(showgrid=True)),
 )
 
 #create sales by hour graph
