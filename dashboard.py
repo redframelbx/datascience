@@ -1,5 +1,5 @@
 import pandas as pd
-import plotly.express as px
+import plotly as px
 import streamlit as st
 
 #must be called as the first Streamlit command in your script.
