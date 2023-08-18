@@ -74,7 +74,13 @@ st.markdown("---")
 sales_by_product_line = (
     df_selection.groupby(by=['Product line'])[['Total']].sum().sort_values(by='Total')
 )
+
+#define sales by date
+sales_by_date = df_selection.groupby(by=['Date'])[['Total']].sum()
+sales_by_date
+
 #create bar chart using plotly
+#define plotly sales by product
 fig_product_sales = px.bar(
     sales_by_product_line,
     x='Total',
@@ -88,6 +94,19 @@ fig_product_sales.update_layout(
     # plot_bgcolor='rgba(0.3,0.3,0.3,0.3)',
     xaxis=(dict(showgrid=True))
 )
+#define plotly sales by hour
+fig_sales_date = px.bar(
+    sales_by_date,
+    x='Total',
+    y=sales_by_date.index,
+    orientation='h',
+    title = '<b>Sales by Date</b>',
+    color_discrete_sequence=['#008388'] * len(sales_by_date),
+    template='plotly_white',
+)
+fig_sales_date.update_layout(
+    # plot_bgcolor='rgba(0.3,0.3,0.3,0.3)',
+    xaxis=(dict(showgrid=True))
 
 #create sales by hour graph
 sales_by_hour = df_selection.groupby(by=['hour'])[['Total']].sum()
@@ -104,7 +123,11 @@ fig_hourly_sales.update_layout(
     yaxis=(dict(showgrid=True)),
 )
 
+
+
 #st.plotly_chart(fig_product_sales)
+st.plotly_chart(fig_sales_date)
+st.markdown('---')
 
 #set the graph to appear next to each other
 left_column, right_column = st.columns(2)
