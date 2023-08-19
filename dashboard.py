@@ -113,7 +113,7 @@ fig_sales_date = px.line(
 fig_sales_date.update_layout(
     # plot_bgcolor='rgba(0.3,0.3,0.3,0.3)',
     xaxis=(dict(showgrid=True)),
-    plot_bgcolor='white'
+    plot_bgcolor='grey'
 )
 
 #create sales by hour graph
