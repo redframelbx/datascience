@@ -89,7 +89,7 @@ fig_product_sales = px.bar(
     y=sales_by_product_line.index,
     orientation='h',
     title = '<b>Sales by Product LIne</b>',
-    # color_discrete_sequence=['#008388'] * len(sales_by_product_line),
+    color_discrete_sequence=['#008388'] * len(sales_by_product_line),
     template='plotly',
 )
 fig_product_sales.update_layout(
@@ -106,7 +106,7 @@ fig_sales_date = px.line(
     x=sales_by_date.index,
     # orientation='h',
     title = '<b>Sales by Date</b>',
-    #color_discrete_sequence=['#008388'] * len(sales_by_date),
+    color_discrete_sequence=['#008388'] * len(sales_by_date),
     template='plotly',
     markers = True
 )
