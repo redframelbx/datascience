@@ -137,11 +137,11 @@ fig_hourly_sales.update_layout(
 left_column, right_column = st.columns(2)
 fig_sunburst = px.sunburst(df, path=['City','Customer_type','Gender'], values='Total',
                     template='plotly')
-left_column.st.plotly_chart(fig_sunburst)
+left_column.plotly_chart(fig_sunburst,use_container_width=True)
 
 fig_sunburst = px.sunburst(df_selection, path=['City','Customer_type','Gender'], values='Total',
                     template='plotly')
-right_column.st.plotly_chart(fig_sunburst)
+right_column.plotly_chart(fig_sunburst,use_container_width=True)
 
 #st.plotly_chart(fig_product_sales)
 st.plotly_chart(fig_sales_date, use_container_width=True)
