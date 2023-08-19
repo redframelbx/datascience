@@ -90,12 +90,12 @@ fig_product_sales = px.bar(
     orientation='h',
     title = '<b>Sales by Product LIne</b>',
     color_discrete_sequence=['#008388'] * len(sales_by_product_line),
-    template='plotly_white',
+    template='plotly',
 )
 fig_product_sales.update_layout(
     # plot_bgcolor='rgba(0.3,0.3,0.3,0.3)',
     xaxis=(dict(showgrid=True)),
-    plot_bgcolor='white'
+    # plot_bgcolor='white'
 )
 #define plotly sales by date
 fig_sales_date = px.line(
