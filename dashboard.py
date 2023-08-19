@@ -132,14 +132,16 @@ fig_hourly_sales.update_layout(
     plot_bgcolor='#f1d2fa'
 )
 
+#chart column
 #sunburst chart
+left_column, right_column = st.columns(2)
 fig_sunburst = px.sunburst(df, path=['City','Customer_type','Gender'], values='Total',
                     template='plotly')
-st.plotly_chart(fig_sunburst)
+left_column.st.plotly_chart(fig_sunburst)
 
 fig_sunburst = px.sunburst(df_selection, path=['City','Customer_type','Gender'], values='Total',
                     template='plotly')
-st.plotly_chart(fig_sunburst)
+right_column.st.plotly_chart(fig_sunburst)
 
 #st.plotly_chart(fig_product_sales)
 st.plotly_chart(fig_sales_date, use_container_width=True)
