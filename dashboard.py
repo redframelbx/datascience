@@ -134,7 +134,7 @@ fig_hourly_sales.update_layout(
 
 
 #st.plotly_chart(fig_product_sales)
-st.fig_sales_date
+st.plotly_chart(fig_sales_date)
 
 
 #set the graph to appear next to each other
