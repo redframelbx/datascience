@@ -135,7 +135,7 @@ fig_hourly_sales.update_layout(
 
 
 #st.plotly_chart(fig_product_sales)
-st.plotly_chart(fig_sales_date)
+st.plotly_chart(fig_sales_date, use_container_width=True)
 st.plotly_chart(fig_hourly_sales, use_container_width=True)
 st.plotly_chart(fig_product_sales, use_container_width=True)
 
