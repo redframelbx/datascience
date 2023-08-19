@@ -136,11 +136,11 @@ fig_hourly_sales.update_layout(
 #sunburst chart
 left_column, right_column = st.columns(2)
 fig_sunburst = px.sunburst(df, path=['City','Customer_type','Gender'], values='Total',
-                    template='plotly')
+                    template='plotly', title='Total Company Sales Breakdown')
 left_column.plotly_chart(fig_sunburst,use_container_width=True)
 
 fig_sunburst = px.sunburst(df_selection, path=['City','Customer_type','Gender'], values='Total',
-                    template='plotly')
+                    template='plotly', title= 'Total Sales Filtered ')
 right_column.plotly_chart(fig_sunburst,use_container_width=True)
 
 #st.plotly_chart(fig_product_sales)
