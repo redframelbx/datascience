@@ -65,7 +65,7 @@ basket_size = ":shopping_bags:"*int(round(average_sales_by_transaction/100,0))
 left_column, middle_column, right_column = st.columns(3)
 with left_column:
     st.subheader("Total Sales:")
-    st.subheader(f"green:'[USD $ {total_sales:,}]'")
+    st.subheader(f"green:[USD $ {total_sales:,}]")
     st.subheader('How much money:')
     st.subheader(f"{money_rating}")
 with middle_column:
