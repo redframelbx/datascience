@@ -88,7 +88,7 @@ fig_product_sales = px.bar(
     x='Total',
     y=sales_by_product_line.index,
     orientation='h',
-    title = '<b>Sales by Product LIne</b>',
+    title = '<b>Total Sales by Product LIne</b>',
     color_discrete_sequence=['#008388'] * len(sales_by_product_line),
     template='plotly',
 )
@@ -105,7 +105,7 @@ fig_sales_date = px.line(
     y='Total',
     x=sales_by_date.index,
     # orientation='h',
-    title = '<b>Sales by Date</b>',
+    title = '<b>Total Sales by Date</b>',
     color_discrete_sequence=['#008388'] * len(sales_by_date),
     template='plotly',
     markers = True
@@ -122,7 +122,7 @@ fig_hourly_sales = px.bar(
     sales_by_hour,
     x = sales_by_hour.index,
     y='Total',
-    title = '<b> Sales by Hour</b>',
+    title = '<b>Total Sales by Hour</b>',
     color_discrete_sequence = ['#008388']* len(sales_by_hour),
     template = 'plotly_white',
 )
