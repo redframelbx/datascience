@@ -76,7 +76,7 @@ with middle_column:
 with right_column:
     st.subheader('Average Sales by Transaction:')
     st.subheader(f"USD $ {average_sales_by_transaction:,}")
-    st.subheader('how many bags per customer:')
+    st.subheader('How many bags per customer:')
     st.subheader(f"{basket_size}")
 
 
