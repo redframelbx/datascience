@@ -132,28 +132,36 @@ fig_hourly_sales.update_layout(
     plot_bgcolor='#f1d2fa'
 )
 
+#define sunburst
+fig_sunburst = px.sunburst(df, path=['City','Customer_type','Gender'], values='Total',
+                    template='plotly', title='Total Company Sales Breakdown')
+fig_sunburst_filter = px.sunburst(df_selection, path=['City','Customer_type','Gender'], values='Total',
+                    template='plotly', title= 'Total Sales Filtered ')
+
 #st.plotly_chart(fig_product_sales)
 st.plotly_chart(fig_sales_date, use_container_width=True)
 
-#chart column
+#original chart column
 #sunburst chart
+# left_column, right_column = st.columns(2)
+# left_column.plotly_chart(fig_sunburst,use_container_width=True)
+# right_column.plotly_chart(fig_sunburst_filter,use_container_width=True)
+# # st.plotly_chart(fig_hourly_sales, use_container_width=True)
+# # st.plotly_chart(fig_product_sales, use_container_width=True)
+# #set the graph to appear next to each other
+# left_column, right_column = st.columns(2)
+# left_column.plotly_chart(fig_hourly_sales, use_container_width=True)
+# right_column.plotly_chart(fig_product_sales, use_container_width=True)
+#end of original chart column
+
 left_column, right_column = st.columns(2)
-fig_sunburst = px.sunburst(df, path=['City','Customer_type','Gender'], values='Total',
-                    template='plotly', title='Total Company Sales Breakdown')
 left_column.plotly_chart(fig_sunburst,use_container_width=True)
-
-fig_sunburst = px.sunburst(df_selection, path=['City','Customer_type','Gender'], values='Total',
-                    template='plotly', title= 'Total Sales Filtered ')
-right_column.plotly_chart(fig_sunburst,use_container_width=True)
-
-
+right_column.plotly_chart(fig_hourly_sales,use_container_width=True)
 # st.plotly_chart(fig_hourly_sales, use_container_width=True)
 # st.plotly_chart(fig_product_sales, use_container_width=True)
-
-
 #set the graph to appear next to each other
 left_column, right_column = st.columns(2)
-left_column.plotly_chart(fig_hourly_sales, use_container_width=True)
+left_column.plotly_chart(fig_sunburst_filter, use_container_width=True)
 right_column.plotly_chart(fig_product_sales, use_container_width=True)
 
 
