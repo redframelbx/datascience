@@ -56,6 +56,7 @@ money_rating = ":dollar:"*int(round(total_sales/10000,0))
 average_rating =round(df_selection['Rating'].mean(),1)
 star_rating = ":star:"*int(round(average_rating,0))
 average_sales_by_transaction = round(df_selection['Total'].mean(),2)
+basket_size = ":shopping_trolley:"*int(round(average_sales_by_transaction/100,0))
 
 
 
@@ -73,7 +74,7 @@ with middle_column:
 with right_column:
     st.subheader('Average Sales by Transaction:')
     st.subheader(f"USD $ {average_sales_by_transaction:,}")
-
+    st.subheader(f"{basket_size}")
 
 
 #define sales by product line
