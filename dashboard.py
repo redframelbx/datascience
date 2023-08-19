@@ -137,6 +137,10 @@ fig_sunburst = px.sunburst(df, path=['City','Customer_type','Gender'], values='T
                     template='plotly')
 st.plotly_chart(fig_sunburst)
 
+fig_sunburst = px.sunburst(df_selection, path=['City','Customer_type','Gender'], values='Total',
+                    template='plotly')
+st.plotly_chart(fig_sunburst)
+
 #st.plotly_chart(fig_product_sales)
 st.plotly_chart(fig_sales_date, use_container_width=True)
 # st.plotly_chart(fig_hourly_sales, use_container_width=True)
