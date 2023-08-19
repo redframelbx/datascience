@@ -136,7 +136,7 @@ fig_hourly_sales.update_layout(
 fig_sunburst = px.sunburst(df, path=['City','Customer_type','Gender'], values='Total',
                     template='plotly', title='Total Company Sales Breakdown')
 fig_sunburst_filter = px.sunburst(df_selection, path=['City','Customer_type','Gender'], values='Total',
-                    template='plotly', title= 'Total Sales Filtered ')
+                    template='plotly', title= 'Total Sales by Filtered City Customer types & Gender ')
 
 #st.plotly_chart(fig_product_sales)
 # st.plotly_chart(fig_sales_date, use_container_width=True)
