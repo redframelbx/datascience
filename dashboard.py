@@ -129,7 +129,7 @@ fig_hourly_sales = px.bar(
 fig_hourly_sales.update_layout(
     xaxis=dict(tickmode='linear'),
     yaxis=(dict(showgrid=True)),
-    plot_bgcolor='white'
+    # plot_bgcolor='white'
 )
 
 
