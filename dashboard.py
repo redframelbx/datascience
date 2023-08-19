@@ -64,7 +64,7 @@ basket_size = ":shopping_bags:"*int(round(average_sales_by_transaction/100,0))
 #streamlit columns
 left_column, middle_column, right_column = st.columns(3)
 with left_column:
-    st.subheader(st.write(:red['Total Sales:']))
+    st.subheader(st.markdown(:red['Total Sales:']))
     st.subheader(f"USD $ {total_sales:,}")
     st.subheader('How much money:')
     st.subheader(f"{money_rating}")
