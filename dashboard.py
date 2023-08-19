@@ -107,13 +107,13 @@ fig_sales_date = px.line(
     # orientation='h',
     title = '<b>Sales by Date</b>',
     #color_discrete_sequence=['#008388'] * len(sales_by_date),
-    template='plotly_white',
+    template='ggplot2',
 )
-fig_sales_date.update_layout(
-    # plot_bgcolor='rgba(0.3,0.3,0.3,0.3)',
-    xaxis=(dict(showgrid=True)),
-    plot_bgcolor='white'
-)
+# fig_sales_date.update_layout(
+#     # plot_bgcolor='rgba(0.3,0.3,0.3,0.3)',
+#     xaxis=(dict(showgrid=True)),
+#     plot_bgcolor='white'
+# )
 
 #create sales by hour graph
 sales_by_hour = df_selection.groupby(by=['hour'])[['Total']].sum()
