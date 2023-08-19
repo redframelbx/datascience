@@ -52,7 +52,7 @@ st.markdown('---')
 
 #top kpi
 total_sales = int(df_selection['Total'].sum())
-money_rating = ":dollar:"*int(round(total_sales/10000,0))
+money_rating = ":dollar:"*int(round(total_sales/1000,0))
 average_rating =round(df_selection['Rating'].mean(),1)
 star_rating = ":star:"*int(round(average_rating,0))
 average_sales_by_transaction = round(df_selection['Total'].mean(),2)
@@ -71,7 +71,7 @@ with left_column:
 with middle_column:
     st.subheader('Average Rating:')
     st.subheader(f"{average_rating}")
-    st.subheader('How many stars did customer give:')
+    st.subheader('How many stars:')
     st.subheader(f"{star_rating}")
 with right_column:
     st.subheader('Average Sales by Transaction:')
