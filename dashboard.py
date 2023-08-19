@@ -107,7 +107,8 @@ fig_sales_date = px.line(
     # orientation='h',
     title = '<b>Sales by Date</b>',
     #color_discrete_sequence=['#008388'] * len(sales_by_date),
-    template='ggplot2'
+    template='ggplot2',
+    markers = True
 )
 fig_sales_date.update_layout(
     # plot_bgcolor='rgba(0.3,0.3,0.3,0.3)',
