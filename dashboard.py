@@ -107,7 +107,7 @@ fig_sales_date = px.line(
     # orientation='h',
     title = '<b>Sales by Date</b>',
     #color_discrete_sequence=['#008388'] * len(sales_by_date),
-    template='plolty',
+    template='plotly',
     markers = True
 )
 # fig_sales_date.update_layout(
