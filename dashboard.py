@@ -139,7 +139,7 @@ fig_sunburst_filter = px.sunburst(df_selection, path=['City','Customer_type','Ge
                     template='plotly', title= 'Total Sales Filtered ')
 
 #st.plotly_chart(fig_product_sales)
-st.plotly_chart(fig_sales_date, use_container_width=True)
+# st.plotly_chart(fig_sales_date, use_container_width=True)
 
 #original chart column
 #sunburst chart
@@ -159,6 +159,7 @@ left_column.plotly_chart(fig_hourly_sales,use_container_width=True)
 right_column.plotly_chart(fig_sunburst,use_container_width=True)
 # st.plotly_chart(fig_hourly_sales, use_container_width=True)
 # st.plotly_chart(fig_product_sales, use_container_width=True)
+st.plotly_chart(fig_sales_date, use_container_width=True)
 #set the graph to appear next to each other
 left_column, right_column = st.columns(2)
 left_column.plotly_chart(fig_product_sales, use_container_width=True)
