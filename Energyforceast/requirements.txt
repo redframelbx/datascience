@@ -1,9 +1,10 @@
+streamlit
 prophet
 datetime
-streamlit
 panda
 numpy
 matplotlib
 plotly
 datashader
 seaborn
+scikit-learn
