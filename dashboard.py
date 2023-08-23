@@ -32,6 +32,7 @@ df.info()
 #     """,
 #     unsafe_allow_html=True
 # )
+st.header(
 f"""
       <style>
       header.css-k0sv6k.e8zbici2 {{
@@ -39,6 +40,7 @@ f"""
       }}
       </style>
 """
+)
 ## Sidebar
 st.sidebar.header('Please filter here:')
 city = st.sidebar.multiselect(
