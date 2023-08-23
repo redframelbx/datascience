@@ -94,13 +94,13 @@ fig_product_sales = px.bar(
     y=sales_by_product_line.index,
     orientation='h',
     title = '<b>Total Sales by Product LIne</b>',
-    color_discrete_sequence=['#008388'] * len(sales_by_product_line),
+    # color_discrete_sequence=['#008388'] * len(sales_by_product_line),
     template='plotly',
 )
 fig_product_sales.update_layout(
     # plot_bgcolor='rgba(0.3,0.3,0.3,0.3)',
     xaxis=(dict(showgrid=True)),
-    plot_bgcolor='#035efc'
+    # plot_bgcolor='#035efc'
 )
 #define plotly sales by date
 fig_sales_date = px.line(
@@ -111,14 +111,14 @@ fig_sales_date = px.line(
     x=sales_by_date.index,
     # orientation='h',
     title = '<b>Total Sales by Date</b>',
-    color_discrete_sequence=['#008388'] * len(sales_by_date),
+    # color_discrete_sequence=['#008388'] * len(sales_by_date),
     template='plotly',
     markers = True
 )
 fig_sales_date.update_layout(
     # plot_bgcolor='rgba(0.3,0.3,0.3,0.3)',
     xaxis=(dict(showgrid=True)),
-    plot_bgcolor='#035efc'
+    # plot_bgcolor='#035efc'
 )
 
 #create sales by hour graph
@@ -128,13 +128,13 @@ fig_hourly_sales = px.bar(
     x = sales_by_hour.index,
     y='Total',
     title = '<b>Total Sales by Hour</b>',
-    color_discrete_sequence = ['#008388']* len(sales_by_hour),
+    # color_discrete_sequence = ['#008388']* len(sales_by_hour),
     template = 'plotly_white',
 )
 fig_hourly_sales.update_layout(
     xaxis=dict(tickmode='linear'),
     yaxis=(dict(showgrid=True)),
-    plot_bgcolor='#035efc'
+    # plot_bgcolor='#035efc'
 )
 
 #define sunburst
