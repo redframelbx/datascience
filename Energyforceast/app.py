@@ -10,7 +10,7 @@ import plotly.graph_objects as go
 import numpy as np
 import datashader as ds
 
-with open('serialized_model.json', 'r') as fin:
+with open('/mount/src/datascience/Energyforceast/serialized_model.json', 'r') as fin:
      model_with_holidays = model_from_json(fin.read())  # Load model
 
 st.set_page_config(page_title='Prophet Forecasting Network',
