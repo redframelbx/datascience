@@ -67,8 +67,11 @@ fig4.update_layout(title_text='Forecasted power use mw')
 fig.show()
 
 st.plotly_chart(fig4,use_container_width=True)
+st.title('Annual Energy Consumption with Predicted Consumption')
 st.pyplot(fig1,use_container_width=True)
+st.title('Previous month with Predicted Consumption')
 st.pyplot(fig2,use_container_width=True)
+st.title('Predicted Consumption BY Weekly, Daily & Hour')
 st.pyplot(fig3,use_container_width=True)
 
 #display the forecast data group by date and display only the yhat column only
