@@ -18,15 +18,15 @@ st.write('---')
 import pickle
 
 # Load the saved model from a file
-with open('mlp_model.pkl', 'rb') as file:
+with open('./churn/mlp_model.pkl', 'rb') as file:
     loaded_model = pickle.load(file)
     # Load the saved model from a file
-with open('svm_model.pkl', 'rb') as file:
+with open('./churn/svm_model.pkl', 'rb') as file:
     loaded_model2 = pickle.load(file)
     # Load the saved model from a file
-with open('svm_model2.pkl', 'rb') as file:
+with open('./churn/svm_model2.pkl', 'rb') as file:
     loaded_model3 = pickle.load(file)
-with open('rf_model.pkl', 'rb') as file:
+with open('./churn/rf_model.pkl', 'rb') as file:
     loaded_model3a = pickle.load(file)
 
 #user inpur for prediction on streamlit
@@ -248,13 +248,13 @@ one = st.checkbox('Use one predictor only', value=True)
 #------------------#
 if one:
     st.write('**MODEL DELTA**')
-    st.image('pages/delta.png')
+    st.image('./churn/delta.png')
     if output2 == 'existing cust':
         st.write('Model Delta predicted this customer as a Normal Customer')
-        st.image('pages/Pass.png')
+        st.image('./churn/Pass.png')
     else:
         st.write('Model Delta predicted this customer WILL churn')
-        st.image('pages/fail.png')
+        st.image('./churn/fail.png')
 
 three = st.checkbox('ADVANCED USER ONLY!: Use all three models to predict')
 
@@ -265,7 +265,7 @@ if three:
 
     with col1:
         st.write('**MODEL ALPHA**')
-        st.image('pages/ALPHA.png')
+        st.image('./churn/ALPHA.png')
         if output0 == 1:
             st.write('Model Alpha predicted this customer as a Normal Customer')
             st.image('pages/Pass.png')
@@ -275,23 +275,23 @@ if three:
             st.image('pages/fail.png')
     with col2:
         st.write('**MODEL BETA**')
-        st.image('pages/beta.png')
+        st.image('./churn/beta.png')
         if output1 == 'existing cust':
             st.write('Model Beta predicted this customer as a Normal Customer')
-            st.image('pages/Pass.png')
+            st.image('./churn/Pass.png')
             
         else:
             st.write('Model Beta predicted this customer WILL churn')
-            st.image('pages/fail.png')
+            st.image('./churn/fail.png')
     with col3:
         st.write('**MODEL DELTA**')
-        st.image('pages/delta.png')
+        st.image('./churn/delta.png')
         if output2 == 'existing cust':
             st.write('Model Delta predicted this customer as a Normal Customer')
-            st.image('pages/Pass.png')
+            st.image('./churn/Pass.png')
         else:
             st.write('Model Deltaa predicted this customer WILL churn')
-            st.image('pages/fail.png')
+            st.image('./churn/fail.png')
 
 
 
