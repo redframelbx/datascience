@@ -7,13 +7,13 @@ from sklearn.preprocessing import StandardScaler
 
 #set streamlit page config
 st.set_page_config(page_title='Credit Card Customer Churn Prediction', layout='wide', initial_sidebar_state='auto')
-st.image('/mount/src/datascience/churn/banner.png')
+st.image('./churn/banner.png')
 st.header('Customer Churn Prediction')
 st.write('This app predicts if a customer is likely by batch. Please upload the file according the template given.')
 st.write('The results of the prediction will be displayed on the bottom of the page.')
 #create sidebar
 st.sidebar.header('Select Page to View')
-template=pd.read_csv('templatedownload.csv')
+template=pd.read_csv('./churn/pages/templatedownload.csv')
 @st.cache_data
 def convert_df(df):
     # IMPORTANT: Cache the conversion to prevent computation on every rerun
@@ -33,15 +33,15 @@ st.download_button(
 # import pickle
 
 # Load the saved model from a file
-with open('mlp_model.pkl', 'rb') as file:
+with open('./churn/mlp_model.pkl', 'rb') as file:
     loaded_model = pickle.load(file)
     # Load the saved model from a file
-with open('svm_model.pkl', 'rb') as file:
+with open('./churn/svm_model.pkl', 'rb') as file:
     loaded_model2 = pickle.load(file)
     # Load the saved model from a file
-with open('svm_model2.pkl', 'rb') as file:
+with open('./churn/svm_model2.pkl', 'rb') as file:
     loaded_model3 = pickle.load(file)
-with open('rf_model.pkl', 'rb') as file:
+with open('./churn/rf_model.pkl', 'rb') as file:
     loaded_model3a = pickle.load(file)
 
 # # Load the saved model from a file
@@ -114,8 +114,8 @@ if uploaded_file is not None:
     # Assuming you have your DataFrame named 'data'
     # Replace this with your actual data loading code
     #Read the data
-    data1=pd.read_csv('SetA-CreditCardCustomers.csv')
-    data2=pd.read_csv('SetB-CreditCardCustomers.csv')
+    data1=pd.read_csv('./churn/SetA-CreditCardCustomers.csv')
+    data2=pd.read_csv('./churn/SetB-CreditCardCustomers.csv')
 
     # Add the 'attrition' column with labels to df1 and df2
     data1 = data1.assign(attrition='existing cust')
