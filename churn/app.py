@@ -7,7 +7,7 @@ from sklearn.preprocessing import StandardScaler
 
 #set streamlit page config
 st.set_page_config(page_title='Credit Card Customer Churn Prediction', layout='wide', initial_sidebar_state='auto')
-st.image('./banner.png')
+st.image('./churn/banner.png')
 st.header('Customer Churn Prediction')
 st.write('This app predicts if a customer is likely to churn or not. Please input all the rquired customer profile details.')
 st.write('The results of the prediction will be displayed on the bottom of the page.')
