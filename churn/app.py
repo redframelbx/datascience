@@ -268,11 +268,11 @@ if three:
         st.image('./churn/ALPHA.png')
         if output0 == 1:
             st.write('Model Alpha predicted this customer as a Normal Customer')
-            st.image('pages/Pass.png')
+            st.image('./churn/Pass.png')
             
         else:
             st.write('Model Alpha predicted this customer WILL churn')
-            st.image('pages/fail.png')
+            st.image('./churn/fail.png')
     with col2:
         st.write('**MODEL BETA**')
         st.image('./churn/beta.png')
