@@ -1,12 +1,9 @@
 #import libraries
 import streamlit as st
-import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-from sklearn.metrics import mean_squared_error, mean_absolute_error
-from sklearn.metrics import accuracy_score
 import pickle
+from sklearn.preprocessing import LabelEncoder
+from sklearn.preprocessing import StandardScaler
 
 #set streamlit page config
 st.set_page_config(page_title='Credit Card Customer Churn Prediction', layout='wide', initial_sidebar_state='auto')
@@ -216,7 +213,7 @@ x = input_df
 x2 = input_df2
 
 
-from sklearn.preprocessing import StandardScaler
+
 scaler = StandardScaler()
 xs = scaler.fit_transform(x)
 #display x for user to see
