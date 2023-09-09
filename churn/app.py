@@ -34,8 +34,8 @@ with open('./churn/rf_model.pkl', 'rb') as file:
 # Assuming you have your DataFrame named 'data'
 # Replace this with your actual data loading code
 # Read the data
-data1=pd.read_csv('SetA-CreditCardCustomers.csv')
-data2=pd.read_csv('SetB-CreditCardCustomers.csv')
+data1=pd.read_csv('./churn/SetA-CreditCardCustomers.csv')
+data2=pd.read_csv('./churn/SetB-CreditCardCustomers.csv')
 
 # Add the 'attrition' column with labels to df1 and df2
 data1 = data1.assign(attrition='existing cust')
