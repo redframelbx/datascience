@@ -9,7 +9,7 @@ from sklearn.preprocessing import StandardScaler
 st.set_page_config(page_title='Credit Card Customer Churn Prediction', layout='wide', initial_sidebar_state='auto')
 st.image('./churn/banner.png')
 st.header('Customer Churn Prediction')
-st.write('This app predicts if a customer is likely by batch. Please upload the file according the template given.')
+st.write('This app predicts if a customer will churn or not by batch. Please upload the file according the template given.')
 st.write('The results of the prediction will be displayed on the bottom of the page.')
 #create sidebar
 st.sidebar.header('Select Page to View')
