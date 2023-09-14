@@ -1,2 +1,2 @@
 # datascience
-for datascience course
+for machine learning with streamlit deployed application
