@@ -191,7 +191,7 @@ if uploaded_file is not None:
     # Map prediction values to category names
     category_predictions = map_predictions(output0)
     category_predictions1 = map_predictions1(output1)
-    category_predictions2 = map_predictions2(output2)
+    #category_predictions2 = map_predictions2(output2)
     # Include CLIENTNUM in the output_data DataFrame
     output_data00 = pd.DataFrame({'Prediction_Alpha':category_predictions})
     output_data01 = pd.DataFrame({'Prediction_Beta':category_predictions1})
