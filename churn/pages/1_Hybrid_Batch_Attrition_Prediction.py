@@ -195,7 +195,7 @@ if uploaded_file is not None:
     # Include CLIENTNUM in the output_data DataFrame
     output_data00 = pd.DataFrame({'Prediction_Alpha':category_predictions})
     output_data01 = pd.DataFrame({'Prediction_Beta':category_predictions1})
-    output_data02 = pd.DataFrame({'Prediction_Omega':category_predictions2})
+    #output_data02 = pd.DataFrame({'Prediction_Omega':category_predictions2})
     #concatenate the input data and the prediction
     output_data = pd.concat([input_data, output_data00,output_data01,output_data02], axis=1)
 
