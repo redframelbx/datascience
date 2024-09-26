@@ -197,7 +197,7 @@ if uploaded_file is not None:
     output_data01 = pd.DataFrame({'Prediction_Beta':category_predictions1})
     #output_data02 = pd.DataFrame({'Prediction_Omega':category_predictions2})
     #concatenate the input data and the prediction
-    output_data = pd.concat([input_data, output_data00,output_data01,output_data02], axis=1)
+    output_data = pd.concat([input_data, output_data00,output_data01], axis=1)
 
     st.write('Predicted Result based on Model Alpha, Beta & Omega')
     st.write(output_data)
