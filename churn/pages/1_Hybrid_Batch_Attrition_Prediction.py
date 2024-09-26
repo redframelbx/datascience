@@ -173,7 +173,7 @@ if uploaded_file is not None:
     # Predict the output for user input
     output0 = loaded_model.predict(x)
     output1 = loaded_model2.predict(xs)
-    output2 = loaded_model3a.predict(x)
+    #output2 = loaded_model3a.predict(x)
     # st.write(output0)
     # st.write(output1)
     # st.write(output2)
